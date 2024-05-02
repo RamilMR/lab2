@@ -1,0 +1,12 @@
+def beşə_bölünən_orta(siyahı, n):
+    beşə_bölünənlər = [ədəd for ədəd in siyahı if ədəd % 5 == 0]
+    beşə_bölünənlər_uzunluğu = len(beşə_bölünənlər)
+    if beşə_bölünənlər_uzunluğu == 0:
+        return "Beşə tam bölünən ədəd yoxdur."
+    orta_indeks = beşə_bölünənlər_uzunluğu // 2
+    orta_ədəd = beşə_bölünənlər[orta_indeks]
+    return orta_ədəd
+n = 10
+siyahı = [random.randint(5, 54) for _ in range(n)]
+print("Siyahı:", siyahı)
+print("Beşə tam bölünən ədədin ortası:", beşə_bölünən_orta(siyahı, n))
